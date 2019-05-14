@@ -8,10 +8,10 @@
 -export([fall_velocity/2]).
 
 fall_velocity(Planemo, Distance) when Distance >= 0 ->
-  case Planemo of
-    earth -> math:sqrt(2 * 9.8 * Distance);
-    moon -> math:sqrt(2 * 1.6 * Distance);
-    mars -> math:sqrt(2 * 3.71 * Distance);
-    _ -> "unknown planet" % This should always be the last case, nothing after
-                          % it gets evaluated.
-  end.
+  Gravity = case Planemo of
+    earth -> 9.8;
+    moon -> 1.6;
+    mars -> 3.71
+  end,      % comma, function ain't over yet boyo
+
+  math:sqrt(2 * Gravity * Distance).
