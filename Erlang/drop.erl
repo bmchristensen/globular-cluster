@@ -14,4 +14,12 @@ fall_velocity(Planemo, Distance) when Distance >= 0 ->
     mars -> 3.71
   end,      % comma, function ain't over yet boyo
 
-  math:sqrt(2 * Gravity * Distance).
+  Velocity = math:sqrt(2 * Gravity * Distance),
+
+  if
+    Velocity == 0 -> 'stable';
+    Velocity < 5 -> 'slow';
+    Velocity >= 5, Velocity < 10 -> 'moving';
+    Velocity >= 10, Velocity < 20 -> 'fast';
+    Velocity >= 20 -> 'speedy'
+  end.
