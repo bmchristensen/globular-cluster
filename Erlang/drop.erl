@@ -16,10 +16,17 @@ fall_velocity(Planemo, Distance) when Distance >= 0 ->
 
   Velocity = math:sqrt(2 * Gravity * Distance),
 
-  if
+  Description = if
     Velocity == 0 -> 'stable';
     Velocity < 5 -> 'slow';
     Velocity >= 5, Velocity < 10 -> 'moving';
     Velocity >= 10, Velocity < 20 -> 'fast';
     Velocity >= 20 -> 'speedy'
-  end.
+  end,
+
+  if
+    (Velocity > 40) -> io:format("Look out below!~n");
+    true->true
+  end,
+
+  Description.
