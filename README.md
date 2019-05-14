@@ -1,5 +1,7 @@
 Brian Christensen
+
 Ben Nesbit
+
 CS381 - Project 1 Proposal
 
 This document details a simple project implemented in three languages. As a means to explore language fundamentals in multiple paradigms, Erlang and ML were selected for functional and Ruby for object-oriented. As an aside, regarding Erlang, its creator Joe Armstrong passed recently: Good night, sweet prince: https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer)
