@@ -1,2 +1,2 @@
 # ignore all beam files (artifact of compiled erlang)
-*.log
+*.beam
