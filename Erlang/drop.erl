@@ -5,10 +5,12 @@
 %% Introducing Erlang</a>
 
 -module(drop).
--export([fall_velocity/1]).
+-export([fall_velocity/2]).
 
-fall_velocity({Planemo, Distance}) -> fall_velocity(Planemo, Distance).
-
-fall_velocity(earth, Distance) when Distance >= 0 -> math:sqrt(2 * 9.8 * Distance);
-fall_velocity(moon, Distance) when Distance >= 0 -> math:sqrt(2 * 1.6 * Distance);
-fall_velocity(mars, Distance) when Distance >= 0 -> math:sqrt(2 * 3.71 * Distance).
+fall_velocity(Planemo, Distance) when Distance >= 0 ->
+  case Planemo of
+    earth -> math:sqrt(2 * 9.8 * Distance);
+    moon -> math:sqrt(2 * 1.6 * Distance);
+    mars -> math:sqrt(2 * 3.71 * Distance);
+    _ -> "unknown planet"
+  end.
