@@ -24,6 +24,6 @@ class Ship
   end
 
   def attack
-    ammo - 1
+    @ammo -= 1
   end
 end
