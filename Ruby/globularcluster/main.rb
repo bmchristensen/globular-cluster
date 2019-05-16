@@ -18,6 +18,10 @@ class GlobularCluster
   end
 
   def show
+    title = File.read('title_sequence.txt')
+    puts(title)
+    puts("\n\n\n\n")
+
     loop do
       # update
       draw
