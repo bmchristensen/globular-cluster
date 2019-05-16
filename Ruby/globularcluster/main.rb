@@ -1,15 +1,19 @@
 #!/usr/bin/env ruby
 
 require_relative 'ship'
+require_relative 'level'
 
 class GlobularCluster
   attr_accessor :ship
+  attr_accessor :level
 
   def initialize
     @ship = Ship.new
+    @level = Level.new
   end
 
   def draw
+    level.draw
     ship.draw
   end
 
