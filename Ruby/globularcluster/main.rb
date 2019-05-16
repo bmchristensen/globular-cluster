@@ -1,15 +1,19 @@
 #!/usr/bin/env ruby
 
 require_relative 'ship'
+require_relative 'hud'
 
 class GlobularCluster
   attr_accessor :ship
+  attr_accessor :hud
 
   def initialize
     @ship = Ship.new
+    @hud = Hud.new
   end
 
   def draw
+    hud.draw
     ship.draw
   end
 
