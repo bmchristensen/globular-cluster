@@ -19,6 +19,16 @@ class Level
     puts self
   end
 
+  def conatins_fuel?
+    ((@level[ship_location][2]).to_i > 0)
+  end
+
+  def fuel
+    ret = @level[@ship_location][2]
+    @level[@ship_location][2] = 0
+    ret
+  end
+
   def has_alien?
     @level[@ship_location][1].include? '👾'
   end
