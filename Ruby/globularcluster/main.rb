@@ -12,6 +12,7 @@ class GlobularCluster
   end
 
   def draw
+    puts `clear`
     level.draw
     ship.draw
   end
