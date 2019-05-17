@@ -60,6 +60,7 @@ class Ship
     puts("off the shoulder of Orion. I watched C-beams glitter in the dark near")
     puts("Tannhauser Gate. All these moments will be lost forever.")
     puts("Like tears in the rain.\"")
+    puts("\n\n")
   end
 
   def out_of_fuel?
@@ -79,5 +80,6 @@ class Ship
     puts("off the shoulder of Orion. I watched C-beams glitter in the dark near")
     puts("Tannhauser Gate. All these moments will be lost forever.")
     puts("Like tears in the rain.\"")
+    puts("\n\n")
   end
 end

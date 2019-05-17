@@ -22,6 +22,7 @@ class GlobularCluster
   def update
     if level.has_alien?
       ship.take_damage
+      draw
     end
     return reset_game if ship.out_of_fuel? | ship.shield_destroyed?
     # For the love of God we need to set above up with observer pattern
@@ -40,6 +41,8 @@ class GlobularCluster
     title = File.read('title_sequence.txt')
     puts(title)
     puts("\n\n\n\n")
+
+    key_pressed(gets.chomp)
 
     loop do
       update
