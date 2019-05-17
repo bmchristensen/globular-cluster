@@ -24,6 +24,7 @@ class Ship
   end
 
   def attack
+    return (puts "Out of munitions!") if @ammo <= 0
     @ammo -= 1
   end
 end
