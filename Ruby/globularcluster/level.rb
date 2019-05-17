@@ -35,7 +35,7 @@ class Level
 
   def destroy_alien
       # regex = /[\u{1f300}-\u{1f5ff}]/
-    @level[@ship_location][1] = '<< 🌑 >>'
+    @level[@ship_location][1] = '<< 💥 🌑 >>'
   end
 
   def next(jump_amount)
