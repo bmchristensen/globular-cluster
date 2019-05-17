@@ -4,7 +4,7 @@ class Level
   attr_accessor :level, :ship_location
 
   def initialize
-    @ship_location = 1
+    @ship_location = 0
     @level = {
       0 => ['✈', '-->'],
       1 => ['✈', '<<👾 🌑 >>', 10, '-->'],
@@ -23,7 +23,7 @@ class Level
     @level[@ship_location][1].include? '👾'
   end
 
-    def destroy_alien
+  def destroy_alien
       # regex = /[\u{1f300}-\u{1f5ff}]/
     @level[@ship_location][1] = '<< 🌑 >>'
   end
