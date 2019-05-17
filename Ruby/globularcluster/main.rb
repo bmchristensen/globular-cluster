@@ -13,6 +13,8 @@ class GlobularCluster
 
   def draw
     puts `clear`
+    # This clear call should be refactored, right now it is clearing in game
+    # messages, such as "out of munitions" or "enemy destroyed"
     level.draw
     ship.draw
   end

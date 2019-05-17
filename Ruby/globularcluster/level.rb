@@ -24,8 +24,10 @@ class Level
   end
 
   def destroy_alien
-    @level[@ship_location][1].gsub('👾', '<< ')
-    puts("It's a hit! Enemy destroyed")
+    if self.has_alien?
+      @level[@ship_location][1].gsub('👾', '<< ')
+      puts("It's a hit! Enemy destroyed")
+    end
   end
 
   def to_s
