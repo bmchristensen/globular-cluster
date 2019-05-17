@@ -50,8 +50,10 @@ class GlobularCluster
   def key_pressed(key)
     if key == 'a'
       ship.take_direct_route
+      level.next(1)
     elsif key == 'd'
       ship.take_circuitous_route
+      level.next(2)
     elsif key == ' '
       ship.attack
       level.destroy_alien

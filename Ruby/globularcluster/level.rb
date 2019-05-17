@@ -30,6 +30,10 @@ class Level
     end
   end
 
+  def next(jump_amount)
+    @ship_location += jump_amount
+  end
+
   def to_s
     "#{level[@ship_location][0]} #{level[@ship_location][1]}"+
       "#{level[@ship_location][2]} #{level[@ship_location][3]}"+
