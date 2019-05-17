@@ -38,11 +38,15 @@ class Ship
 
   def out_of_fuel?
     return false if (@fuel > 0)
+    out_of_fuel_message
+    true
+  end
+
+  def out_of_fuel_message
     puts("You ran out of fuel. Floating in the dark void of space,")
     puts("you can only wait for starvation, suffication, or for a")
     puts("roving muarder clan to put you out of your misery...")
     puts("Your only solace is that perhaps in another timeline, another")
     puts("universe, some version of yourself was successful...")
-    true
   end
 end
