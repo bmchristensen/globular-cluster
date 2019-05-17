@@ -1,14 +1,17 @@
+# require_relative 'lvl_enum'
+
 class Level
   attr_accessor :level, :ship_location
 
   def initialize
-    @ship_location = 'first'
+    @ship_location = 0
     @level = {
-      'first' => ['👾', '🌑', 5],
-      'second' => ['alien: True', 'fuel: 0'],
-      'third' => ['alien: False', 'fuel: 0'],
-      'fourth' => ['alien: True', 'fuel: 1'],
-      'end' => ['alien: False', 'fuel: 0']
+      0 => ['✈', '-->', '', '', ''],
+      1 => ['✈', '<< 👾', '🌑 >>', 10, '-->'],
+      2 => ['✈', '<< 👾', '🌑 >>', 10, '-->'],
+      3 => ['✈', '', '<< 🌑 >>', 0, '-->'],
+      4 => ['✈', '<< 👾', '🌑 >>', 10, '-->'],
+      5 => ['✈', '', '', 0, 'X']
     }
   end
 
@@ -17,7 +20,6 @@ class Level
   end
 
   def to_s
-    # puts(level['first'][0])
-    "✈️ --> #{level[@ship_location][0]} #{level[@ship_location][1]} --> 👾️ 🌑️  --> 🌑️  --> 🌑️ 👾  --> 'end'"
+    "#{level[@ship_location][0]} #{level[@ship_location][1]} #{level[@ship_location][2]}#{level[@ship_location][3]} #{level[@ship_location][4]}"
   end
 end
