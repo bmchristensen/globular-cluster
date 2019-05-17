@@ -13,11 +13,14 @@ class GlobularCluster
 
   def draw
     puts `clear`
+    # This clear call should be refactored, right now it is clearing in game
+    # messages, such as "out of munitions" or "enemy destroyed"
     level.draw
     ship.draw
   end
 
   def update
+    return ship.take_damage if level.has_alien?
     return reset_game if ship.out_of_fuel? | ship.shield_destroyed?
     # For the love of God we need to set above up with observer pattern
     key_pressed(gets.chomp)
@@ -49,6 +52,7 @@ class GlobularCluster
       ship.take_circuitous_route
     elsif key == ' '
       ship.attack
+      level.destroy_alien
     elsif key == 'q'
       exit()
     end
