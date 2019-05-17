@@ -17,7 +17,8 @@ class GlobularCluster
   end
 
   def update
-    return reset_game if ship.out_of_fuel? # Look into observer pattern
+    return reset_game if ship.out_of_fuel? | ship.shield_destroyed?
+    # For the love of God we need to set above up with observer pattern
     key_pressed(gets.chomp)
   end
 
@@ -45,6 +46,8 @@ class GlobularCluster
       ship.take_circuitous_route
     elsif key == ' '
       ship.attack
+    elsif key == 'x'
+      ship.take_damage
     end
   end
 end

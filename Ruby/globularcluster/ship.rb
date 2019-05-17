@@ -36,7 +36,24 @@ class Ship
     @fuel -= 10
   end
 
-  def shield_destroyed?; end
+  def take_damage; end
+
+  def shield_destroyed?
+    return false if (@shield > 0)
+    shield_destroyed_message
+    true
+  end
+
+  def shield_destroyed_message
+    puts("You fought valiantly, but in the end your sheilds were not able to")
+    puts("repel munitions of such magnitude.")
+    puts("As the last of your shield capacitors run dry, you hear the crack")
+    puts("of your shield discharge, and wait for the impending explosive")
+    puts("decompresion that will be caused by the next volely of muntions from")
+    puts("you opponent...")
+    puts("You can only hope versions of yourself accross other timelines were")
+    puts("more successful...")
+  end
 
   def out_of_fuel?
     return false if (@fuel > 0)
