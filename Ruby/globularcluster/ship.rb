@@ -36,7 +36,9 @@ class Ship
     @fuel -= 10
   end
 
-  def take_damage; end
+  def take_damage
+    @shield -= 20
+  end
 
   def shield_destroyed?
     return false if (@shield > 0)
@@ -50,7 +52,7 @@ class Ship
     puts("As the last of your shield capacitors run dry, you hear the crack")
     puts("of your shield discharge, and wait for the impending explosive")
     puts("decompresion that will be caused by the next volely of muntions from")
-    puts("you opponent...")
+    puts("your opponent...")
     puts("You can only hope versions of yourself accross other timelines were")
     puts("more successful...")
   end

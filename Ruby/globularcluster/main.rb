@@ -46,9 +46,6 @@ class GlobularCluster
       ship.take_circuitous_route
     elsif key == ' '
       ship.attack
-    elsif key == 'x'
-      ship.take_damage
-    end
   end
 end
 
