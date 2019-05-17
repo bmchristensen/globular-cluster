@@ -36,6 +36,8 @@ class Ship
     @fuel -= 10
   end
 
+  def shield_destroyed?; end
+
   def out_of_fuel?
     return false if (@fuel > 0)
     out_of_fuel_message
