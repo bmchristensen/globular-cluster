@@ -4,7 +4,7 @@ class Level
   attr_accessor :level, :ship_location
 
   def initialize
-    @ship_location = 1
+    @ship_location = 0
     @level = {
       0 => ['✈', '-->'],
       1 => ['✈', '<<👾 🌑 >>', 10, '-->'],
