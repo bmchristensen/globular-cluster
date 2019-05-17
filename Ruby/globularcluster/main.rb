@@ -17,15 +17,24 @@ class GlobularCluster
     ship.draw
   end
 
+  def update
+    key_pressed(gets.chomp)
+  end
+
+  def reset_game
+    @ship = Ship.new
+    @level = Level.new
+    show
+  end
+
   def show
     title = File.read('title_sequence.txt')
     puts(title)
     puts("\n\n\n\n")
 
     loop do
-      # update
+      update
       draw
-      key_pressed(gets.chomp)
     end
   end
 
