@@ -48,7 +48,7 @@ class Ship
     puts("You ran out of fuel. Floating in the dark void of space,")
     puts("you can only wait for starvation, suffication, or for a")
     puts("roving muarder clan to put you out of your misery...")
-    puts("Your only solace is that perhaps in another timeline, another")
+    puts("Your only comfort is that perhaps in another timeline, another")
     puts("universe, some version of yourself was successful...")
   end
 end
