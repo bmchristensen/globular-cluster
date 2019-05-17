@@ -46,6 +46,9 @@ class GlobularCluster
       ship.take_circuitous_route
     elsif key == ' '
       ship.attack
+    elsif key == 'q'
+      exit()
+    end
   end
 end
 
