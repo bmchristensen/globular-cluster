@@ -26,10 +26,12 @@ class GlobularCluster
   def reset_game
     @ship = Ship.new
     @level = Level.new
+    key_pressed(gets.chomp)
     show
   end
 
   def show
+    puts `clear`
     title = File.read('title_sequence.txt')
     puts(title)
     puts("\n\n\n\n")
