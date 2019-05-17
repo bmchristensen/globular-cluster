@@ -23,14 +23,15 @@ class Ship
     -----------------------------"
   end
 
-  def refuel(amt)
-    if amt != nil
-      @fuel += amt
+  def refuel(amount)
+    !amount.nil?
+      @fuel += amount
     end
   end
 
   def attack
     return (puts "Out of munitions!") if @ammo <= 0
+
     @ammo -= 1
   end
 
