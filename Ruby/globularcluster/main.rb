@@ -50,6 +50,7 @@ class GlobularCluster
       ship.take_circuitous_route
     elsif key == ' '
       ship.attack
+      level.destroy_alien
     elsif key == 'q'
       exit()
     end
