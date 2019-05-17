@@ -12,22 +12,26 @@ class GlobularCluster
   end
 
   def draw
+    puts `clear`
     level.draw
     ship.draw
   end
 
   def update
-    return reset_game if ship.out_of_fuel? # Look into observer pattern
+    return reset_game if ship.out_of_fuel? | ship.shield_destroyed?
+    # For the love of God we need to set above up with observer pattern
     key_pressed(gets.chomp)
   end
 
   def reset_game
     @ship = Ship.new
     @level = Level.new
+    key_pressed(gets.chomp)
     show
   end
 
   def show
+    puts `clear`
     title = File.read('title_sequence.txt')
     puts(title)
     puts("\n\n\n\n")
@@ -45,6 +49,8 @@ class GlobularCluster
       ship.take_circuitous_route
     elsif key == ' '
       ship.attack
+    elsif key == 'q'
+      exit()
     end
   end
 end
