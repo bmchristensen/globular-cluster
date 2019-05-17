@@ -4,7 +4,7 @@ class Level
   attr_accessor :level, :ship_location
 
   def initialize
-    @ship_location = 0
+    @ship_location = 1
     @level = {
       0 => ['✈', '-->'],
       1 => ['✈', '<<👾 🌑 >>', 10, '-->'],
@@ -24,10 +24,7 @@ class Level
   end
 
   def destroy_alien
-    if self.has_alien?
-      @level[@ship_location][1].gsub('👾', '<< ')
-      puts("It's a hit! Enemy destroyed")
-    end
+    @level[@ship_location][1].gsub('👾', '<< ')
   end
 
   def to_s
