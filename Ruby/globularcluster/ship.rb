@@ -3,7 +3,7 @@ class Ship
 
   def initialize
     @velocity = 11.53
-    @fuel = 5
+    @fuel = 15
     @dist = '?'
     @ammo = 10
     @shield = 100
@@ -28,7 +28,11 @@ class Ship
     @ammo -= 1
   end
 
-  def take_direct_route; end
+  def take_direct_route
+    @fuel -= 5
+  end
 
-  def take_circuitous_route; end
+  def take_circuitous_route
+    @fuel -= 10
+  end
 end
