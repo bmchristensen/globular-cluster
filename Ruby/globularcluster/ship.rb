@@ -55,6 +55,11 @@ class Ship
     puts("your opponent...")
     puts("You can only hope versions of yourself accross other timelines were")
     puts("more successful...")
+    puts("\n\n")
+    puts("\"I’ve seen things you people wouldn’t believe. Attack ships on fire ")
+    puts("off the shoulder of Orion. I watched C-beams glitter in the dark near")
+    puts("Tannhauser Gate. All these moments will be lost forever.")
+    puts("Like tears in the rain.\"")
   end
 
   def out_of_fuel?
@@ -69,5 +74,10 @@ class Ship
     puts("roving muarder clan to put you out of your misery...")
     puts("Your only comfort is that perhaps in another timeline, another")
     puts("universe, some version of yourself was successful...")
+    puts("\n\n")
+    puts("\"I’ve seen things you people wouldn’t believe. Attack ships on fire ")
+    puts("off the shoulder of Orion. I watched C-beams glitter in the dark near")
+    puts("Tannhauser Gate. All these moments will be lost forever.")
+    puts("Like tears in the rain.\"")
   end
 end
