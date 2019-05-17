@@ -27,4 +27,8 @@ class Ship
     return (puts "Out of munitions!") if @ammo <= 0
     @ammo -= 1
   end
+
+  def take_direct_route; end
+
+  def take_circuitous_route; end
 end
