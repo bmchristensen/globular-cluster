@@ -35,4 +35,9 @@ class Ship
   def take_circuitous_route
     @fuel -= 10
   end
+
+  def out_of_fuel?
+    return true if (@fuel == 0)
+    false
+  end
 end

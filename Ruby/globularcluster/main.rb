@@ -18,6 +18,7 @@ class GlobularCluster
   end
 
   def update
+    return reset_game if ship.out_of_fuel? # Look into observer pattern
     key_pressed(gets.chomp)
   end
 
