@@ -24,11 +24,14 @@ class GlobularCluster
       ship.take_damage
       draw
     end
+
     if level.conatins_fuel?
       ship.refuel(level.fuel)
       draw
     end
+
     return reset_game if ship.out_of_fuel? | ship.shield_destroyed?
+
     # For the love of God we need to set above up with observer pattern
     key_pressed(gets.chomp)
   end
@@ -65,7 +68,7 @@ class GlobularCluster
       ship.attack
       level.destroy_alien
     elsif key == 'q'
-      exit()
+      exit
     end
   end
 end
