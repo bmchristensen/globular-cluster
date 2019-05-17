@@ -18,6 +18,7 @@ class GlobularCluster
   end
 
   def update
+    return ship.take_damage if level.has_alien?
     return reset_game if ship.out_of_fuel? | ship.shield_destroyed?
     # For the love of God we need to set above up with observer pattern
     key_pressed(gets.chomp)

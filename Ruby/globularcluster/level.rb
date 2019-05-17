@@ -19,6 +19,10 @@ class Level
     puts self
   end
 
+  def has_alien?
+    @level[@ship_location][1].include? '👾'
+  end
+
   def to_s
     "#{level[@ship_location][0]} #{level[@ship_location][1]} #{level[@ship_location][2]}#{level[@ship_location][3]} #{level[@ship_location][4]}"
   end
