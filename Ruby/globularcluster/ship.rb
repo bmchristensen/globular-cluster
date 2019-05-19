@@ -25,8 +25,7 @@ class Ship
 
   def refuel(amount)
     !amount.nil?
-      @fuel += amount
-    end
+    @fuel += amount
   end
 
   def attack
