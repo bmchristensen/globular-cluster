@@ -1,11 +1,17 @@
 -module(gameLoop).
--export([start/0]).
--import(level, [show/0]).
+-export([loop/1]).
+-import(level, [show/1]).
 
-start() ->
+loop([]) ->
+    io:format("You made it to the end!");
+loop([Head|Tail]) ->
     clearScreen(),
-    io:format("We are in the game loop. ~n"), % Remove this later!
-    level:show().
+    io:format("Current Planet: ~w~n", [Head]),
+    io:format("Future Planets: ~p~n", [Tail]),
+    io:fwrite("We are in the game loop. ~n"), % Remove this later!
+    level:show([Head]),
+    io:get_line("\t\tPress <Enter> to continue!"),
+    loop([Tail]).
 
 
 clearScreen() ->

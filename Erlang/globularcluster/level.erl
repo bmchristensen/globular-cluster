@@ -1,7 +1,7 @@
 -module(level).
--export([show/0]).
+-export([show/1]).
 
-show() ->
+show(Planet) ->
     print_file("ship.txt").
 
 print_file(Name) ->
