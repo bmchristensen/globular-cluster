@@ -1,6 +1,7 @@
 -module(game).
 -export([start/0]).
--import(title, [show/1]).
+-import(title, [show/0]).
+-import(gameLoop, [test/0]).
 
 start() ->
     title:show(),
@@ -8,7 +9,4 @@ start() ->
 
 waitForStartInput() ->
     io:get_line("\t\tPress <Enter> to start!"),
-    startGame().
-
-startGame() ->
-    io:format("Game has started. ~n").
+    gameLoop:start().
