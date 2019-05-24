@@ -2,6 +2,16 @@ Brian Christensen
 
 Ben Nesbit
 
+# To Get Things Running
+
+## Ruby
+
+## Erlang
+
+## SML-NJ
+
+#
+
 CS381 - Project 1 Proposal
 
 This document details a simple project implemented in three languages. As a means to explore language fundamentals in multiple paradigms, Erlang and ML were selected for functional and Ruby for object-oriented. As an aside, regarding Erlang, its creator Joe Armstrong passed recently: Good night, sweet prince: https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer)
@@ -39,5 +49,8 @@ The leading entry in each nonzero row is 1.
 Each leading 1 is the only nonzero entry in its column.
 
 That this application requires use of lists, has a concrete algorithm (definition of the form), and requires manipulation of a variety of aspects of the lists makes this an ideal candidate to demonstrate the strengths and weaknesses of both functional and object oriented languages. Additionally, the applications of linear algebra are vast in the realm of computer science. This is not necessarily a strong reason to implement this for the context of the project, but perhaps is reason for intrigue.
+
+Erlang ASCII art credit:
+Spaceship - Unknown author, https://textart.io/art/HO6I36Hyhg2OyM2kcTSorgeF/spaceship-rocket
 
 I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near Tannhauser Gate. All these moments will be lost forever. Like tears in the rain.
