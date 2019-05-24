@@ -10,4 +10,4 @@ start() ->
 waitForStartInput() ->
     io:get_line("\t\tPress <Enter> to start!"),
     PlanetList = [p1, p2, p3, final],
-    gameLoop:loop([PlanetList]).
+    gameLoop:loop(PlanetList).

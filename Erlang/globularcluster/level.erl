@@ -2,7 +2,12 @@
 -export([show/1]).
 
 show(Planet) ->
-    print_file("ship.txt").
+    if
+      Planet == p1 ->
+        print_file("ship.txt");
+      true ->
+        io:format("Other Files")
+    end.
 
 print_file(Name) ->
     {ok, File} = file:open(Name, [read]),
