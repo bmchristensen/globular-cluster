@@ -5,12 +5,12 @@ show() ->
     print_file("title_sequence.txt").
 
 print_file(Name) ->
-    {ok, Device} = file:open(Name, [read]),
-    get_lines(Device).
+    {ok, File} = file:open(Name, [read]),
+    get_lines_from(File).
 
-get_lines(Device) ->
-    case io:get_line(Device, "") of
-        eof  -> file:close(Device);
+get_lines_from(File) ->
+    case io:get_line(File, "") of
+        eof  -> file:close(File);
         Line -> io:fwrite("~s", [Line]),
-                    get_lines(Device)
+                    get_lines_from(File)
     end.
