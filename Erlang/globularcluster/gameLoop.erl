@@ -4,7 +4,7 @@
 
 start() ->
     clearScreen(),
-    io:format("We are in the game loop. ~n"),
+    io:format("We are in the game loop. ~n"), % Remove this later!
     level:show().
 
 
