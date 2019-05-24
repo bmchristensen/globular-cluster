@@ -1,5 +1,5 @@
--module(start).
+-module(title).
 -compile(export_all).
 
-start() ->
+show() ->
     io:format("GLOBULAR CLUSTER~n").
