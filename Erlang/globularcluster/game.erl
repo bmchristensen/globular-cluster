@@ -1,5 +1,5 @@
 -module(game).
--compile(export_all).
+-export([start/0]).
 -import(title, [show/1]).
 
 start() ->
@@ -7,7 +7,7 @@ start() ->
     waitForStartInput().
 
 waitForStartInput() ->
-    Term = io:get_line("Press <Enter> to start!"),
+    io:get_line("Press <Enter> to start!"),
     startGame().
 
 startGame() ->
