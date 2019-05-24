@@ -7,7 +7,7 @@ start() ->
     waitForStartInput().
 
 waitForStartInput() ->
-    io:get_line("Press <Enter> to start!"),
+    io:get_line("\t\tPress <Enter> to start!"),
     startGame().
 
 startGame() ->
