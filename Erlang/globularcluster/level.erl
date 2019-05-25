@@ -4,9 +4,11 @@
 show(Planet) ->
     if
       Planet == p1 ->
-        print_file("ship.txt");
+        print_file("ship.txt"),
+        print_file("planet.txt");
       true ->
-        io:format("Other Files")
+        print_file("planet.txt")
+        % io:format("Other Files")
     end.
 
 print_file(Name) ->
