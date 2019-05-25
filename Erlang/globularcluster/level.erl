@@ -4,11 +4,13 @@
 show(Planet) ->
     if
       Planet == p1 ->
-        print_file("ship.txt"),
-        print_file("planet.txt");
+        print_file("levelOne.txt");
+      Planet == p2 ->
+        print_file("levelTwo.txt");
+      Planet == p3 ->
+        print_file("levelThree.txt");
       true ->
-        print_file("planet.txt")
-        % io:format("Other Files")
+        print_file("levelFinal.txt")
     end.
 
 print_file(Name) ->
