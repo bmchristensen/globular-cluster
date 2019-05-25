@@ -1,10 +1,49 @@
-Brian Christensen
+<pre>
+   _____ _      ____  ____  _    _ _               _____
+  / ____| |    / __ \|  _ \| |  | | |        /\   |  __ \
+ | |  __| |   | |  | | |_) | |  | | |       /  \  | |__) |
+ | | |_ | |   | |  | |  _ <| |  | | |      / /\ \ |  _  /
+ | |__| | |___| |__| | |_) | |__| | |____ / ____ \| | \ \
+  \_____|______\____/|____/ \____/|______/_/    \_\_|  \_\
+          _____ _     _    _  _____ _______ ______ _____
+         / ____| |   | |  | |/ ____|__   __|  ____|  __ \
+        | |    | |   | |  | | (___    | |  | |__  | |__) |
+        | |    | |   | |  | |\___ \   | |  |  __| |  _  /
+        | |____| |___| |__| |____) |  | |  | |____| | \ \
+         \_____|______\____/|_____/   |_|  |______|_|  \_\
+</pre>
+A simple command line game in three languages.
 
+by,
+
+Brian Christensen<br>
 Ben Nesbit
+
+# Setup and Requirements
+
+Version check:<br>
+  $ ruby --version<br>
+  $ sml (view in virtual machine)<br>
+  $ erl (view in virtual machine)
+
+For Ruby, you will need a version 2 release. Anything 2.X or 2.X.X.<br>
+Any psuedo-recent Erlang and SML release will work.
 
 # To Get Things Running
 
 ## Ruby
+<pre>
+root
+ |___Ruby
+      |___globularcluster
+                |
+            level.rb
+                |
+             main.rb
+</pre>
+From the command line, navigate to the 'Ruby' directory and then into the 'globularcluster' directory (there won't be quotes on the actual director names). Then, execute the main.rb file:
+
+  $ ruby main.rb
 
 ## Erlang
 
