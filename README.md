@@ -14,6 +14,10 @@
 </pre>
 A simple command line game in three languages.
 
+You meet a Replicant, near death. You learn there were originally four of them who stole a ship to escape the outer reaches of the galaxy. The others are dead. This last one, as if embodying the spirit of Rutger Hauer, begins telling you about their travels and adventures. He says, "I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near Tannhauser Gate. All these moments will be lost forever. Like tears in the rain."
+
+Perhaps the ship is nearby...perhaps stealing a stolen ship isn't as bad as stealing it in the first place? What do C-beams look like?
+
 by,
 
 Brian Christensen<br>
@@ -22,9 +26,9 @@ Ben Nesbit
 # Setup and Requirements
 
 Version check:<br>
-  $ ruby --version<br>
-  $ sml (view in virtual machine)<br>
-  $ erl (view in virtual machine)
+    $ ruby --version<br>
+    $ sml<br>
+    $ erl
 
 For Ruby, you will need a version 2 release. Anything 2.X or 2.X.X.<br>
 Any psuedo-recent Erlang and SML release will work.
@@ -46,7 +50,48 @@ From the command line, navigate to the 'Ruby' directory and then into the 'globu
   $ ruby main.rb
 
 ## Erlang
+<pre>
+root
+ |___Ruby
+ |     |___globularcluster
+ |               |
+ |           level.rb
+ |               |
+ |            main.rb
+ |               |
+ |             <etc>
+ |___Erlang
+       |___globularcluster
+                 |
+             level.erl
+                 |
+             title.erl
+                 |
+               <etc>
+</pre>
+From the command line, navigate to the 'Erlang' directory and then into the 'globularcluster' directory (there won't be quotes on the actual directory names). Once inside the application directory, spin up an instance of the Erlang virtual machine:
 
+   $ erl
+
+From inside the erlang virtual machine, the application modules must be compiled. Execute the following commands:
+
+   Eshell V10.2.4 (abort with ^G)<br>
+   1> c(game).<br>
+   2> c(gameLoop).<br>
+   3> c(level).<br>
+   4> c(title).
+   
+   Don't forget the period <.> after each command! Each compilation command is executed by pressing <ENTER>.<br>
+   The Erlang VM will tell you if it's correct:<br>
+      1> c(game).<br>
+      {ok,game}    -> this is the Erlang response to successful compilation<br>
+   
+If no changes are made to the source files for the application, the compilation process will not have to be repeated.<br>
+
+Finally, boot up the game with the following command:
+
+   5> game:start().
+   
 ## SML-NJ
 
 #
