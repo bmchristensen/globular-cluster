@@ -2,7 +2,7 @@
 
 fun gameLoop([]) = "You've reached the end!"
   | gameLoop(planet::remainingList) =
-    (print planet; gameLoop(remainingList));
+    ((print planet; print "\n"); gameLoop(remainingList));
 
 fun start() =
     (* Call function to display title screen *)
