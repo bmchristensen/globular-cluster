@@ -1,8 +1,10 @@
 (* Game *)
 
+fun printLine (line) = (print line; print "\n");
+
 fun gameLoop([]) = "You've reached the end!"
   | gameLoop(planet::remainingList) =
-    ((print planet; print "\n"); gameLoop(remainingList));
+    (printLine(planet); gameLoop(remainingList));
 
 fun start() =
     (* Call function to display title screen *)
