@@ -1,4 +1,8 @@
 (* Helper Functions *)
+
+use "title_sequence.txt";
+use "directions.txt";
+
 fun printFile(fileName) =
     let val fileDescriptor = TextIO.openIn fileName
         val dataStream = TextIO.inputAll fileDescriptor
@@ -6,10 +10,16 @@ fun printFile(fileName) =
     in String.tokens (fn c => c = #"\n") dataStream
     end;
 
-fun printLine (line) =
+fun printLine(line) =
     (
       print line;
       print "\n"
+    );
+
+fun printIntro() =
+    (
+      printFile("title_sequence.txt");
+      printFile("directions.txt");
     );
 
 fun waitForUser(gameState) =
