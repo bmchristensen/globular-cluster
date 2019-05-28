@@ -6,8 +6,14 @@ fun printLine (line) =
       print "\n"
     );
 
-fun waitForUser() =
-    (
-      printLine("Press <enter> to start!");
-      TextIO.inputLine TextIO.stdIn
-    );
+fun waitForUser(gameState) =
+    if gameState = "start" then
+      (
+        printLine("Press <enter> to start!");
+        TextIO.inputLine TextIO.stdIn
+      )
+    else
+      (
+        printLine("Press <enter> to continue!");
+        TextIO.inputLine TextIO.stdIn
+      );
