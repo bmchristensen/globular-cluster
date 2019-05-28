@@ -6,6 +6,7 @@ fun gameLoop([]) = "You've reached the end!"
   | gameLoop(planet::remainingList) =
     (
       printLine(planet);
+      waitForUser("");
       gameLoop(remainingList)
     );
 
