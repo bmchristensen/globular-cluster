@@ -136,5 +136,5 @@ That this application requires use of lists, has a concrete algorithm (definitio
 
 Erlang ASCII art credit:
 Spaceship - Unknown author, https://textart.io/art/HO6I36Hyhg2OyM2kcTSorgeF/spaceship-rocket
-
-I’ve seen things you people wouldn’t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near Tannhauser Gate. All these moments will be lost forever. Like tears in the rain.
+Alien - Unknown author, https://www.asciiart.eu/space/aliens
+Planets - Unknown author, https://www.asciiart.eu/space/planets
