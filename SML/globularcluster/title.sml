@@ -1,7 +1,8 @@
-fun readTitle(filename) =
-    let val fileBuffer = TextIO.openIn filename
-        val title = TextIO.inputAll fileBuffer
-        val _ = TextIO.closeIn fileBuffer
-    in String.tokens (fn c => c = #"\n") title
+fun printFile file =
+    let
+        val ins = TextIO.openIn file
+        fun getLine() = TextIO.inputLine ins
+    in
+        getLine() before
+        TextIO.closeIn ins
     end
-
