@@ -10,10 +10,3 @@
         | |    | |   | |  | |\___ \   | |  |  __| |  _  /
         | |____| |___| |__| |____) |  | |  | |____| | \ \
          \_____|______\____/|_____/   |_|  |______|_|  \_\
-____________________________________________________________________________
-
-         Enter: starts the game, and must be used to enter any command
-         a: initiates a short jump
-         d: initiates a long jump
-         space: fires munitions
-         q: quits the game
