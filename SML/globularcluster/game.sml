@@ -10,9 +10,9 @@ fun gameLoop([]) = "You've reached the end!"
     );
 
 fun start() =
-    (* Call function to display title screen *)
     (
-      waitForUser();
+      (* Call function to display title screen; *)
+      waitForUser("start");
       let
           val planets = ["p1", "p2", "p3", "final"]
       in
