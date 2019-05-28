@@ -13,9 +13,7 @@ fun gameLoop([]) = "You've reached the end!"
 
 fun start() =
     (
-      printFile("title_sequence.txt");
-      printFile("directions.txt");
-      (* Call function to display title screen; *)
+      printIntro();
       waitForUser("start");
       let
           val planets = ["p1", "p2", "p3", "final"]
