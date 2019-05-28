@@ -1,6 +1,6 @@
 (* Game *)
 
-fun printLine (line) = (print line; print "\n");
+use("helpers.sml");
 
 fun gameLoop([]) = "You've reached the end!"
   | gameLoop(planet::remainingList) =
