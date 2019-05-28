@@ -1,7 +1,7 @@
 (* Game *)
 
 use("helpers.sml");
-use("title.sml");
+(* use("title.sml"); *)
 
 fun gameLoop([]) = "You've reached the end!"
   | gameLoop(planet::remainingList) =
