@@ -2,7 +2,7 @@ class Ship
   attr_accessor :velocity, :fuel, :dist, :ammo, :shield
 
   def initialize(params = {})
-    @velocity = 11.53
+    @velocity = params.fetch(:velocity, 11.53)
     @fuel = 15
     @dist = '?'
     @ammo = 10
