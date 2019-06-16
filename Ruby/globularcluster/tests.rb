@@ -7,4 +7,9 @@ class ShipTest < Minitest::Test
     test_ship = Ship.new
     assert test_ship != nil
   end
+
+  def test_a_ships_initial_velocity
+    test_ship = Ship.new
+    assert test_ship.velocity == 11.53
+  end
 end
