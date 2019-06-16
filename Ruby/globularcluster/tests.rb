@@ -32,4 +32,9 @@ class ShipTest < Minitest::Test
     test_ship = Ship.new
     assert test_ship.dist == '?'
   end
+
+  def test_a_ships_initial_dist_with_input
+    test_ship = Ship.new(:dist => 'Woah dude, you\'re way out there')
+    assert test_ship.dist == 'Woah dude, you\'re way out there'
+  end
 end
