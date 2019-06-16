@@ -27,4 +27,9 @@ class ShipTest < Minitest::Test
     test_ship = Ship.new(:fuel => 4.20)
     assert test_ship.fuel == 4.20
   end
+
+  def test_a_ships_initial_dist_with_no_input
+    test_ship = Ship.new
+    assert test_ship.dist == '?'
+  end
 end
