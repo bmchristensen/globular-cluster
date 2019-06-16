@@ -4,7 +4,7 @@ class Ship
   def initialize(params = {})
     @velocity = params.fetch(:velocity, 11.53)
     @fuel = params.fetch(:fuel, 15)
-    @dist = '?'
+    @dist = params.fetch(:dist, '?')
     @ammo = 10
     @shield = 100
   end
