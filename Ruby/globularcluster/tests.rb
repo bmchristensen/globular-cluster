@@ -22,4 +22,9 @@ class ShipTest < Minitest::Test
     test_ship = Ship.new
     assert test_ship.fuel == 15
   end
+
+  def test_a_ships_initial_fuel_with_input
+    test_ship = Ship.new(:fuel => 4.20)
+    assert test_ship.fuel == 4.20
+  end
 end
