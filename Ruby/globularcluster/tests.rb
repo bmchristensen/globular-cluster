@@ -37,4 +37,9 @@ class ShipTest < Minitest::Test
     test_ship = Ship.new(:dist => 'Woah dude, you\'re way out there')
     assert test_ship.dist == 'Woah dude, you\'re way out there'
   end
+
+  def test_a_ships_initial_ammo_with_no_input
+    test_ship = Ship.new
+    assert test_ship.ammo == 10
+  end
 end
